@@ -20,6 +20,7 @@ model = pickle.load(open('gboost_model.pkl','rb'))
 
 # scaling
 scaler = StandardScaler()
+input_features[['Age', ...]] = scaler.fit_transform(input_features[['Age', ...]])
 
 # input features
 Age = st.number_input('Age',min_value=20 , max_value=100,value=25)
